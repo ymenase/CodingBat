@@ -150,5 +150,47 @@ public class Logic1 {
 			return false;
 		}
 	}
+	
+	//specialEleven
+	// We'll say a number is special if it is a multiple of 11 or if it is one
+	// more than a
+	// multiple of 11. Return true if the given non-negative number is special.
+	//
+	// specialEleven(22) → true
+	// specialEleven(23) → true
+	// specialEleven(24) → false
+	public boolean specialEleven(int n) {
+		if (n % 11 == 0 || n % 11 - 1 == 0) {
+			return true;
+		}
+		return false;
+	}
+	
+	//more20
+	//Return true if the given non-negative number is 1 or 2 more than a multiple of 20
+	//	more20(20) → false
+	//	more20(21) → true
+	//	more20(22) → true
+	public boolean more20(int n) {
+		  if (n % 20 - 1 == 0 || n % 20 - 2 == 0) {
+		    return true;
+		  }
+		  return false;
+		}
+	
+	//old35
+	//Return true if the given non-negative number is a multiple of 3 or 5, but not both.
+	//old35(3) → true
+	//old35(10) → true
+	//old35(15) → false
+	public boolean old35(int n) {
+		  if (n % 3 == 0 || n % 5 == 0) {
+		    if (!(n % 3 == 0 && n % 5 == 0)) {
+		      return true;
+		    }
+		  }
+		  return false;
+		}
+
 
 }
