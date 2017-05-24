@@ -37,6 +37,5 @@ public class Logic1Test {
 		assertEquals(logic1.old35(10), true);
 		assertEquals(logic1.old35(15), false);
 		
-		
 	}
 }

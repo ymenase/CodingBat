@@ -69,9 +69,18 @@ public class WarmUp1Test {
 		assertEquals(wu1.delDel("adelbc"), "abc");
 		assertEquals(wu1.delDel("adelHello"), "aHello");
 		assertEquals(wu1.delDel("adedbc"), "adedbc");
-		
-
-
+		assertEquals(wu1.mixStart("mix snacks"), true);
+		assertEquals(wu1.mixStart("zix snacks"), true);
+		assertEquals(wu1.mixStart("zil snacks"), false);
+		assertEquals(wu1.startOz("ozymandias"), "oz");
+		assertEquals(wu1.startOz("bzoo"), "z");
+		assertEquals(wu1.startOz("oxx"), "o");
+		assertEquals(wu1.intMax(1, 2, 3), 3);
+		assertEquals(wu1.intMax(1, 4, 2), 4);
+		assertEquals(wu1.intMax(5, 3, 1), 5);
+		assertEquals(wu1.close10(8, 13), 8);
+		assertEquals(wu1.close10(13, 8), 8);
+		assertEquals(wu1.close10(13, 7), 0);
 
 
 	}
