@@ -33,6 +33,15 @@ public class Array1Test {
 		assertEquals(array1.maxEnd3(new int[] {1, 2, 3}), new int[] {3, 3, 3});
 		assertEquals(array1.maxEnd3(new int[] {11, 5, 9}), new int[] {11, 11, 11});
 		assertEquals(array1.maxEnd3(new int[] {2, 11, 3}), new int[] {3, 3, 3});
+		assertEquals(array1.makeLast(new int[] {4, 5, 6}), new int[] {0, 0, 0, 0, 0, 6});
+		assertEquals(array1.makeLast(new int[] {1, 3}), new int[] {0, 0, 0, 3});
+		assertEquals(array1.makeLast(new int[] {4}), new int[] {0, 4});
+		assertEquals(array1.double23(new int[] {2, 2}), true);
+		assertEquals(array1.double23(new int[] {3, 3}), true);
+		assertEquals(array1.double23(new int[] {2, 3}), false);
+		assertEquals(array1.fix23(new int[] {1, 2, 3}), new int[] {1, 2, 0});
+		assertEquals(array1.fix23(new int[] {2, 3, 5}), new int[] {2, 0, 5});
+		assertEquals(array1.fix23(new int[] {1, 2, 1}), new int[] {1, 2, 1});
 		
 		
 	}

@@ -1,16 +1,13 @@
 package logic2;
 
 public class Logic2 {
+	
 	//makeBricks
-
 	//We want to make a row of bricks that is goal inches long. We have a number of
 	//small bricks (1 inch each) and big bricks (5 inches each). Return true if it is
 	//possible to make the goal by choosing from the given bricks. This is a little
 	//harder than it looks and can be done without any loops.
 
-	// makeBricks(3, 1, 8) → true
-	// makeBricks(3, 1, 9) → false
-	// makeBricks(3, 2, 10) → true
 
 	public boolean makeBricks(int small, int big, int goal) {
 	  int totalInchesSmall = small; //3 inches
@@ -61,7 +58,6 @@ public class Logic2 {
 	}
 
 	//luckySum
-
 	//Given 3 int values, a b c, return their sum. However, if one of the values is 13
 	////for example, if b is 13, then both b and c do not count.
 
@@ -88,7 +84,6 @@ public class Logic2 {
 	}
 
 	//noTeenSum
-
 	// Given 3 int values, a b c, return their sum. However, if any of the values is a
 	// teen -- in the range 13..19 inclusive -- then that value counts as 0, except 15
 	// and 16 do not count as a teens. Write a separate helper "public int fixTeen(int n)

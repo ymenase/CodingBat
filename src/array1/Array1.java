@@ -135,17 +135,13 @@ public class Array1 {
 	// elements are 0. The original array will be length 1 or more. Note: by
 	// default, a new int array contains all 0's.
 	//
-	// makeLast([4, 5, 6]) → [0, 0, 0, 0, 0, 6]
-	// makeLast([1, 2]) → [0, 0, 0, 2]
-	// makeLast([3]) → [0, 3]
 	public int[] makeLast(int[] nums) {
 		int[] newArray = new int[nums.length * 2];
 		newArray[newArray.length - 1] = nums[nums.length - 1];
 		return newArray;
 	}
 
-	// Given an int array, return true if the array contains 2 twice, or 3
-	// twice.
+	// Given an int array, return true if the array contains 2 twice, or 3 twice.
 	// The array will be length 0, 1, or 2.
 	public boolean double23(int[] nums) {
 
