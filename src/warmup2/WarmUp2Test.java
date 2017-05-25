@@ -29,6 +29,9 @@ public class WarmUp2Test {
 		assertEquals(warmUp2.last2("hixxhi"), 1);
 		assertEquals(warmUp2.last2("xaxxaxaxx"), 1);
 		assertEquals(warmUp2.last2("axxxaaxx"), 2);
+		//assertEquals(warmUp2.arrayFront9(new int[] {1, 2, 9, 3, 4}), true);
+		
+
 		
 	}
 }

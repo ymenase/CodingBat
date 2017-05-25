@@ -31,13 +31,8 @@ public class Logic2 {
 
 
 	//loneSum
-
 	// Given 3 int values, a b c, return their sum. However, if one of the values
 	//is the same as another of the values, it does not count towards the sum.
-	//
-	// loneSum(1, 2, 3) → 6
-	// loneSum(3, 2, 3) → 2
-	// loneSum(3, 3, 3) → 0
 	public int loneSum(int a, int b, int c) {
 	 int sum = a + b + c;
 
@@ -59,11 +54,8 @@ public class Logic2 {
 
 	//luckySum
 	//Given 3 int values, a b c, return their sum. However, if one of the values is 13
-	////for example, if b is 13, then both b and c do not count.
+	//for example, if b is 13, then both b and c do not count.
 
-	// luckySum(1, 2, 3) → 6
-	// luckySum(1, 2, 13) → 3
-	// luckySum(1, 13, 3) → 1
 	public int luckySum(int a, int b, int c) {
 	  int sum = a + b + c;
 
@@ -90,10 +82,6 @@ public class Logic2 {
 	// {"that takes in an int value and returns that value fixed for the teen rule.
 	// In this way, you avoid repeating the teen code 3 times (i.e. "decomposition").
 	// Define the helper below and at the same indent level as the main noTeenSum().
-	//
-	// noTeenSum(1, 2, 3) → 6
-	// noTeenSum(2, 13, 1) → 3
-	// noTeenSum(2, 1, 14) → 3
 
 	public int noTeenSum(int a, int b, int c) {
 	  int res=0;
@@ -118,10 +106,6 @@ public class Logic2 {
 	// Given three ints, a b c, return true if one of b or c is "close" (differing from
 	// a by at most 1), while the other is "far", differing from both other values by 2
 	// or more. Note: Math.abs(num) computes the absolute value of a number.
-	//
-	// closeFar(1, 2, 10) → true
-	// closeFar(1, 2, 3) → false
-	// closeFar(4, 1, 3) → true
 
 	public boolean closeFar(int a, int b, int c) {
 	  if (Math.abs(a - b) <= 1 && Math.abs(a - c) >= 2 && Math.abs(b - c) >= 2){

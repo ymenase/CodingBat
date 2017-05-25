@@ -11,5 +11,19 @@ public class Logic2Test {
 		assertEquals(logic2.makeBricks(3, 1, 8), true);
 		assertEquals(logic2.makeBricks(3, 1, 10), false);
 		assertEquals(logic2.makeBricks(3, 4, 10), true);
+		assertEquals(logic2.loneSum(1, 2, 3), 6);
+		assertEquals(logic2.loneSum(3, 2, 3), 2);
+		assertEquals(logic2.loneSum(3, 3, 3), 0);
+		assertEquals(logic2.luckySum(1, 2, 3), 6);
+		assertEquals(logic2.luckySum(1, 2, 13), 3);
+		assertEquals(logic2.luckySum(1, 13, 3), 1);
+		assertEquals(logic2.noTeenSum(1, 2, 3), 6);
+		assertEquals(logic2.noTeenSum(2, 13, 1), 3);
+		assertEquals(logic2.noTeenSum(2, 1, 14), 3);
+		assertEquals(logic2.closeFar(1, 2, 10), true);
+		assertEquals(logic2.closeFar(1, 2, 3), false);
+		assertEquals(logic2.closeFar(4, 1, 3), true);
+
+		
 	}	
 }
