@@ -124,5 +124,75 @@ public class Logic2 {
 	// blackjack(19, 21) → 21
 	// blackjack(21, 19) → 21
 	// blackjack(19, 22) → 19
+	
+	public int blackjack(int a, int b){
+		  if (a > 21 && b > 21){
+		    return 0;
+		  }
+		  if (a <= 21 && b > 21){
+		    return a;
+		  }
+		  if (a > 21 && b <=21){
+		    return b;
+		  }
+		    return Math.max(a,b);
+		}
+	
+	//evenlySpaced
+	//Given three ints, a b c, one of them is small, one is medium and one is large. 
+	//Return true if the three values are evenly spaced, so the difference between small and medium 
+	//is the same as the difference between medium and large.
+	//evenlySpaced(2, 4, 6) → true
+	//evenlySpaced(4, 6, 2) → true
+	//evenlySpaced(4, 6, 3) → false
+	
+	public boolean evenlySpaced(int a, int b, int c) {
 
+		int temp = 0;
+
+		  if (a > c){
+		    temp = a;
+		    a = c;
+		    c = temp;
+		  }
+
+		  if (a > b){
+		    temp = a;
+		    a = b;
+		    b = temp;
+		  }
+
+		  if (b > c) {
+		    temp = b;
+		    b = c;
+		    c = temp;
+		  }
+
+		  if (Math.abs(a-b) == Math.abs(b-c)) {
+		    return true;
+		  }
+		  else{
+		    return false;
+		  }
+
+		}
+	
+	//makeChocolate
+	//We want make a package of goal kilos of chocolate. We have small bars (1 kilo each) 
+	//and big bars (5 kilos each). Return the number of small bars to use, assuming we 
+	//always use big bars before small bars. Return -1 if it can't be done.
+	//makeChocolate(4, 1, 9) → 4
+	//makeChocolate(4, 1, 10) → -1
+	//makeChocolate(4, 1, 7) → 2
+	public int makeChocolate(int small, int big, int goal) {
+		  while (goal >=5 && big>0) {
+		    goal -= 5; 
+		    big--;     
+		  }
+		  if (goal<=small) {
+		    return goal; 
+		  }
+		  else return -1;
+		}
+	
 }
