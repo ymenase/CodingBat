@@ -125,27 +125,48 @@ public class WarmUp1Test {
 		assertEquals(wu1.in1020(22, 12), true);
 		assertEquals(wu1.in1020(5, 40), false);
 	}
+	
+	public void hasTeen(){
 		assertEquals(wu1.hasTeen(14, 20, 30), true);
 		assertEquals(wu1.hasTeen(20, 15, 9), true);
 		assertEquals(wu1.hasTeen(8, 4, 11), false);
+	}
+	
+	public void loneTeen(){
 		assertEquals(wu1.loneTeen(13, 99), true);
 		assertEquals(wu1.loneTeen(21, 19), true);
 		assertEquals(wu1.loneTeen(14, 14), false);
+	}
+	
+	public void delDel(){
 		assertEquals(wu1.delDel("adelbc"), "abc");
 		assertEquals(wu1.delDel("adelHello"), "aHello");
 		assertEquals(wu1.delDel("adedbc"), "adedbc");
+	}
+	
+	public void mixStart(){
 		assertEquals(wu1.mixStart("mix snacks"), true);
 		assertEquals(wu1.mixStart("zix snacks"), true);
 		assertEquals(wu1.mixStart("zil snacks"), false);
+	}
+	
+	public void startOz(){
 		assertEquals(wu1.startOz("ozymandias"), "oz");
 		assertEquals(wu1.startOz("bzoo"), "z");
 		assertEquals(wu1.startOz("oxx"), "o");
+	}
+	
+	public void intMax(){
 		assertEquals(wu1.intMax(1, 2, 3), 3);
 		assertEquals(wu1.intMax(1, 4, 2), 4);
 		assertEquals(wu1.intMax(5, 3, 1), 5);
+	}
+	
+	public void close10(){
 		assertEquals(wu1.close10(8, 13), 8);
 		assertEquals(wu1.close10(13, 8), 8);
 		assertEquals(wu1.close10(13, 7), 0);
+	}
 
 
 	}

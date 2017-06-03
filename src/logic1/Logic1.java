@@ -74,6 +74,26 @@ public class Logic1 {
 			return false;
 		}
 	}
+	
+	//caughtSpeeding
+	//You are driving a little too fast, and a police officer stops you. Write code to compute the result, encoded as an int value: 0=no ticket, 1=small ticket, 2=big ticket. If speed is 60 or less, the result is 0. If speed is between 61 and 80 inclusive, the result is 1. If speed is 81 or more, the result is 2. 
+	//Unless it is your birthday -- on that day, your speed can be 5 higher in all cases.
+	public int caughtSpeeding(int speed, boolean isBirthday) {
+		  if(isBirthday) {
+		    speed = speed - 5;
+		  }
+		  if (speed <= 60){
+		  return 0;
+		  }
+		  else if (speed > 60 && speed <= 80 ){
+		   return 1;
+		  }
+		  else if (speed >= 81) {
+		    return 2;
+		  }
+		  return 0;
+		  
+		}
 
 	// sortaSum
 
@@ -331,7 +351,65 @@ public class Logic1 {
 		  
 		}
 
+	//inOrderEqual
+	//Given three ints, a b c, return true if they are in strict increasing order, 
+	//such as 2 5 11, or 5 6 7, but not 6 5 7 or 5 5 7. However, with the exception that if "equalOk" is true, equality is allowed, such as 5 5 7 or 5 5 5.
+	//inOrderEqual(2, 5, 11, false) → true
+	//inOrderEqual(5, 7, 6, false) → false
+	//inOrderEqual(5, 5, 7, true) → true
+	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+		  if (equalOk){
+		    if (b >= a && c >= b){
+		    return true;
+		    }
+		  }
+		  if (!equalOk){
+		    if (b > a && c >b){
+		    return true;
+		    }
+		  }
+		  return false;
+		}
 	
+	//lastDigit 
+//	Given three ints, a b c, return true if two or more of them have the same 
+//rightmost digit. The ints are non-negative. Note: the % "mod" operator computes the remainder, e.g. 17 % 10 is 7.
 
+//	lastDigit(23, 19, 13) → true
+//	lastDigit(23, 19, 12) → false
+//	lastDigit(23, 19, 3) → true
+	public boolean lastDigit(int a, int b, int c) {
+		  int modA = a % 10;
+		  int modB = b % 10;
+		  int modC = c % 10;
+		  
+		  if (modA == modB || modA == modC || modB == modC) {
+		    return true;
+		  }
+		  return false;
+		}
+
+	//lessByTen
+
+	//Given three ints, a b c, return true if one of them is 10 or more less than one of the others.
+	//lessBy10(1, 7, 11) → true
+	//lessBy10(1, 7, 10) → false
+	//lessBy10(11, 1, 7) → true
+	public boolean lessBy10(int a, int b, int c) {
+		  if (Math.abs(a - b) >= 10 || Math.abs(b - c) >= 10 || Math.abs(a - c) >= 10){
+		    return true;
+		  }
+		  
+		  return false;
+		}
+
+
+	//withoutDoubles
+	//Return the sum of two 6-sided dice rolls, each in the range 1..6. 
+	//However, if noDoubles is true, if the two dice show the same value, increment one die to the next value, wrapping around to 1 if its value was 6.
+
+	//withoutDoubles(2, 3, true) → 5
+	//withoutDoubles(3, 3, true) → 7
+	//withoutDoubles(3, 3, false) → 6
 
 }
